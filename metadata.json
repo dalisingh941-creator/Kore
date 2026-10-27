@@ -1,0 +1,6 @@
+{
+  "name": "Kore — Autonomous Agent Workspace",
+  "description": "Multi-agent personal workspace with customizable animated mascots, cloud computer sandboxes, MCP tool orchestration, and collaborative group chat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes mascotFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-2.5px) scale(1.015);
+  }
+}
+
+@keyframes mascotWorkBob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-3px) rotate(-3deg) scale(1.03, 0.98);
+  }
+  75% {
+    transform: translateY(-2px) rotate(3deg) scale(0.98, 1.03);
+  }
+}
+
+@keyframes mascotThinkTilt {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  35% {
+    transform: rotate(-6deg) translateY(-2px);
+  }
+  70% {
+    transform: rotate(5deg) translateY(-1px);
+  }
+}
+
+@keyframes mascotSpeakBounce {
+  0%, 100% {
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1.04, 0.96) translateY(-2px);
+  }
+}
+
+@keyframes pupilScan {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-2.2px, -0.5px);
+  }
+  75% {
+    transform: translate(2.2px, -0.5px);
+  }
+}
+
+@keyframes pupilThink {
+  0%, 100% {
+    transform: translate(0px, -2px);
+  }
+  50% {
+    transform: translate(2px, -2.5px);
+  }
+}
+
+@keyframes eyeBlink {
+  0%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes mouthSpeak {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(1.45) scaleX(0.9);
+  }
+}
+
+@keyframes workingTextShimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-mascot-idle {
+  animation: mascotFloat 3.6s ease-in-out infinite;
+}
+
+.animate-mascot-working {
+  animation: mascotWorkBob 1.35s cubic-bezier(0.36, 0, 0.66, 1) infinite;
+}
+
+.animate-mascot-thinking {
+  animation: mascotThinkTilt 2.2s ease-in-out infinite;
+}
+
+.animate-mascot-speaking {
+  animation: mascotSpeakBounce 0.55s ease-in-out infinite;
+}
+
+.animate-pupil-scan {
+  animation: pupilScan 1.4s ease-in-out infinite;
+}
+
+.animate-pupil-think {
+  animation: pupilThink 2s ease-in-out infinite;
+}
+
+.animate-eye-blink {
+  transform-origin: center;
+  animation: eyeBlink 4.2s ease-in-out infinite;
+}
+
+.animate-mouth-speak {
+  transform-origin: center;
+  animation: mouthSpeak 0.38s ease-in-out infinite;
+}
+
+.working-shimmer-text {
+  background: linear-gradient(90deg, #52525b 0%, #a1a1aa 50%, #52525b 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: workingTextShimmer 2.2s linear infinite;
+}
